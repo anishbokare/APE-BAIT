@@ -1,0 +1,106 @@
+# APE-BAIT Default Configuration
+# All values can be overridden via CLI flags or environment variables
+
+# ─── Engine Settings ────────────────────────────────────────────
+engine:
+  mode: demo                  # live | demo | pcap-replay
+  interface: eth0             # Network interface for live capture
+  batch_size: 32              # Packets per processing batch
+  max_latency_ms: 2000        # Maximum end-to-end latency budget (ms)
+  queue_size: 1024            # Capture queue depth
+  workers: 4                  # Parallel processing threads
+  log_level: INFO             # DEBUG | INFO | WARNING | ERROR
+
+# ─── Perturbation Settings ──────────────────────────────────────
+perturbation:
+  method: pgd                 # fgsm | pgd | ensemble
+  epsilon: 0.03               # L-infinity perturbation bound
+  mse_threshold: 0.04         # Maximum allowed MSE distortion (stealth constraint)
+
+  fgsm:
+    epsilon: 0.03             # FGSM-specific epsilon (overrides global if set)
+    targeted: false           # True = targeted attack; False = untargeted
+
+  pgd:
+    steps: 40                 # Number of PGD iterations
+    step_size: 0.003          # Per-step perturbation size (alpha = epsilon/10)
+    random_start: true        # Random initialization within epsilon ball
+    restarts: 3               # Number of random restarts
+    early_stop: true          # Stop early if evasion achieved (saves latency)
+
+  ensemble:
+    weights:
+      ids: 0.4                # Weight for IDS surrogate loss
+      malware: 0.4            # Weight for malware classifier loss
+      anomaly: 0.2            # Weight for anomaly detector loss
+
+# ─── Model Settings ─────────────────────────────────────────────
+models:
+  device: cpu                 # cpu | cuda | mps (Apple Silicon)
+  paths:
+    ids: data/models/surrogate_ids.pt
+    malware: data/models/surrogate_malware.pt
+    anomaly: data/models/surrogate_anomaly.pt
+  feature_dim: 256            # Input feature vector dimension
+  payload_max_len: 512        # Max payload bytes for byte-level models
+
+# ─── Capture Settings ───────────────────────────────────────────
+capture:
+  bpf_filter: ""              # Berkeley Packet Filter (e.g., "tcp port 80")
+  snapshot_len: 65535         # Max bytes per packet
+  promisc: true               # Promiscuous mode
+  timeout_ms: 100             # Capture timeout
+
+# ─── Injection Settings ─────────────────────────────────────────
+injection:
+  mode: replay                # replay | live | pcap-write
+  recalc_checksums: true      # Recalculate IP/TCP/UDP checksums
+  rate_limit_pps: 10000       # Max packets per second to inject
+
+# ─── Validation Settings ────────────────────────────────────────
+validation:
+  tools:
+    - snort
+    - suricata
+    - yara
+    - clamav
+    - zeek
+    - ml_ids_cnn
+    - ml_ids_rf
+    - ml_ids_lstm
+    - anomaly_iforest
+    - anomaly_lof
+    - anomaly_autoencoder
+    - malconv
+    - ember_lgbm
+    - dga_detector
+    - port_scan_detector
+  parallel: true              # Run tools in parallel
+  timeout_per_tool: 60        # Seconds per tool
+
+  snort:
+    config: config/tools/snort.yaml
+    rules_path: /etc/snort/rules/
+    binary: snort
+
+  suricata:
+    config: config/tools/suricata.yaml
+    binary: suricata
+
+  yara:
+    rules_dir: /etc/yara/rules/
+    binary: yara
+
+# ─── Dashboard Settings ─────────────────────────────────────────
+dashboard:
+  host: 0.0.0.0
+  port: 8080
+  debug: false
+  update_interval_ms: 500     # WebSocket push frequency
+
+# ─── Logging ────────────────────────────────────────────────────
+logging:
+  format: json                # json | text
+  file: logs/ape-bait.log
+  max_size_mb: 100
+  backup_count: 5

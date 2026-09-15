@@ -1,0 +1,38 @@
+{"timestamp": "2026-09-13T20:45:03", "level": "INFO", "logger": "ape-bait.injector", "message": "Wrote 2 packets to C:\\Users\\anish\\AppData\\Local\\Temp\\pytest-of-anish\\pytest-0\\test_write_pcap_creates_file0\\test_output.pcap"}
+{"timestamp": "2026-09-13T20:45:03", "level": "INFO", "logger": "ape-bait.injector", "message": "Wrote 3 packets to C:\\Users\\anish\\AppData\\Local\\Temp\\pytest-of-anish\\pytest-0\\test_write_pcap_nonempty0\\test_output.pcap"}
+{"timestamp": "2026-09-13T20:45:03", "level": "INFO", "logger": "ape-bait.injector", "message": "Wrote 0 packets (raw) to C:\\Users\\anish\\AppData\\Local\\Temp\\pytest-of-anish\\pytest-0\\test_write_empty_list0\\empty.pcap"}
+{"timestamp": "2026-09-13T20:45:27", "level": "INFO", "logger": "ape-bait.injector", "message": "Wrote 2 packets to C:\\Users\\anish\\AppData\\Local\\Temp\\pytest-of-anish\\pytest-1\\test_write_pcap_creates_file0\\test_output.pcap"}
+{"timestamp": "2026-09-13T20:45:27", "level": "INFO", "logger": "ape-bait.injector", "message": "Wrote 3 packets to C:\\Users\\anish\\AppData\\Local\\Temp\\pytest-of-anish\\pytest-1\\test_write_pcap_nonempty0\\test_output.pcap"}
+{"timestamp": "2026-09-13T20:45:27", "level": "INFO", "logger": "ape-bait.injector", "message": "Wrote 0 packets (raw) to C:\\Users\\anish\\AppData\\Local\\Temp\\pytest-of-anish\\pytest-1\\test_write_empty_list0\\empty.pcap"}
+{"timestamp": "2026-09-13T20:45:37", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Starting APE-BAIT Dashboard", "host": "0.0.0.0", "port": 8090, "debug": true}
+{"timestamp": "2026-09-13T20:46:17", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Starting APE-BAIT Dashboard", "host": "0.0.0.0", "port": 8090, "debug": false}
+{"timestamp": "2026-09-13T20:47:08", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:47:53", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:47:55", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:48:40", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:48:41", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:49:26", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:49:27", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:50:12", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:50:12", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:50:57", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:50:59", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:51:44", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:51:45", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:52:30", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:52:31", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:53:06", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:53:15", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:53:16", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:53:25", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:53:51", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:53:53", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:54:00", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:54:10", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:54:12", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:54:38", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:54:58", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Starting APE-BAIT Dashboard", "host": "0.0.0.0", "port": 8090, "debug": true}
+{"timestamp": "2026-09-13T20:55:02", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:55:47", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}
+{"timestamp": "2026-09-13T20:55:48", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client connected"}
+{"timestamp": "2026-09-13T20:56:33", "level": "INFO", "logger": "ape-bait.dashboard", "message": "Dashboard client disconnected"}

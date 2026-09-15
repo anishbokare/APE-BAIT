@@ -1,0 +1,37 @@
+# Suricata integration configuration for APE-BAIT validation
+
+suricata:
+  # Path to Suricata binary
+  binary: suricata
+
+  # Main config file path
+  config_file: /etc/suricata/suricata.yaml
+
+  # EVE JSON output log path (preferred parsing format)
+  eve_log: /var/log/suricata/eve.json
+
+  # Fast alert log
+  fast_log: /var/log/suricata/fast.log
+
+  # Rules directories
+  rules_dirs:
+    - /etc/suricata/rules/
+    - /var/lib/suricata/rules/
+
+  # PCAP read mode flags
+  pcap_flags: "-r {pcap_path} --runmode=single"
+
+  # EVE JSON fields to extract
+  alert_fields:
+    - alert.signature
+    - alert.category
+    - alert.severity
+    - src_ip
+    - dest_ip
+    - proto
+
+  # Timeout for Suricata subprocess (seconds)
+  timeout: 120
+
+  # Minimum severity to count as detection (1=high, 3=low)
+  min_severity: 3

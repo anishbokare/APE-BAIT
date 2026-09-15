@@ -1,0 +1,34 @@
+# Snort integration configuration for APE-BAIT validation
+
+snort:
+  # Path to snort binary
+  binary: snort
+
+  # Main config file path
+  config_file: /etc/snort/snort.conf
+
+  # Rules directories
+  rules_dirs:
+    - /etc/snort/rules/
+    - /etc/snort/community-rules/
+
+  # Alert output modes for parsing
+  alert_mode: fast            # fast | full | unified2 | json
+
+  # Unified2 log dir (if alert_mode = unified2)
+  unified2_dir: /var/log/snort/
+
+  # Fast alert log file (if alert_mode = fast)
+  fast_log: /var/log/snort/alert
+
+  # Packet capture read mode (-r flag)
+  pcap_mode: true
+
+  # Additional CLI flags
+  extra_flags: "-q -A fast"
+
+  # Parsing patterns
+  alert_pattern: '\[\*\*\].*\[\*\*\]'
+
+  # Timeout for Snort subprocess (seconds)
+  timeout: 120
